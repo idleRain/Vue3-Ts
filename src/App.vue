@@ -1,17 +1,7 @@
 <script setup lang="ts">
+import Channel from './components/Channel.vue'
 </script>
 
 <template>
-<router-view></router-view>
+  <Channel />
 </template>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-html,body,#app {
-  width: 100%;
-  height: 100%;
-}
-</style>
