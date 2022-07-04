@@ -9,7 +9,7 @@ export type ArticleItem = {
   aut_name: string
   comm_count: number
   cover: {
-    images: string[]
+    images?: string[]
     type
   }
   is_top: number

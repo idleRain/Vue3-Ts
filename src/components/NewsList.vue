@@ -4,8 +4,7 @@ import useStore from '../store'
 
 const {articles, channel} = useStore()
 channel.$subscribe(() => {
-  // console.log(123)
-  articles.getArticlesList()
+  articles.getArticlesList(channel.active)
 })
 </script>
 
@@ -15,9 +14,10 @@ channel.$subscribe(() => {
       <h3 class="van-ellipsis">{{ item.title }}</h3>
       <div class="img_box">
         <img
+            v-if="item.cover.images"
             :src="item.cover.images[0]"
             class="w100"
-            :alt="item.cover.images[0]"
+            :alt="item.title"
         />
       </div>
       <div class="info_box">
@@ -29,4 +29,4 @@ channel.$subscribe(() => {
   </div>
 </template>
 
-<style scoed lang="less"></style>
+<style scoped lang="less"></style>
